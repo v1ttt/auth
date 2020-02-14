@@ -1,0 +1,51 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+  },
+  plugins: ['@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  env: {
+    'browser': true,
+    'node': true,
+  },
+  rules: {
+    'semi': ['error', 'never'],
+    'quotes': ['error', 'single'],
+    'jsx-quotes': ['error', 'prefer-double'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'no-trailing-spaces': 'error',
+    'indent': ['error', 2, { 'SwitchCase': 1 }],
+    'no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 0, 'maxBOF': 0 }],
+    'eol-last': ['error', 'always'],
+    'space-before-function-paren': ['error', 'always'],
+    'func-call-spacing': ['error', 'never'],
+    'object-curly-spacing': ['error', 'always'],
+    'array-bracket-spacing': ['error', 'never'],
+    'space-in-parens': ['error', 'never'],
+    'comma-spacing': ['error', { 'before': false, 'after': true }],
+    'keyword-spacing': ['error', { 'before': true, 'after': true }],
+    'space-before-blocks': 'error',
+    'arrow-spacing': 'error',
+    'space-infix-ops': 'error',
+    'no-multi-spaces': 'error',
+    'eqeqeq': ['error', 'always'],
+    'no-undef-init': 'error',
+
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/member-delimiter-style': ['error', {
+      'multiline': {
+        'delimiter': 'none',
+      },
+    }],
+  },
+}
