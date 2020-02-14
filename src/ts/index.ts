@@ -1,4 +1,5 @@
 import axios from 'axios'
+import 'promise-polyfill/src/polyfill'
 
 window.addEventListener('DOMContentLoaded', () => {
   const origin = 'https://authentication.woman.ru'
