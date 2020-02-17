@@ -6,6 +6,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
@@ -44,8 +45,16 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/member-delimiter-style': ['error', {
       'multiline': {
-        'delimiter': 'none',
+        'delimiter': 'comma',
+      },
+      'singleline': {
+        'delimiter': 'comma',
       },
     }],
+
+    'react/self-closing-comp': 'error',
+    'react/jsx-tag-spacing': 'error',
+    'react/jsx-curly-spacing': [2, { 'when': 'never', 'children': true }],
+    'react/jsx-equals-spacing': [2, 'never'],
   },
 }
